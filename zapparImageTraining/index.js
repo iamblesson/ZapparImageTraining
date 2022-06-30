@@ -17,12 +17,12 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 app.use(pino);
 
-var keys =  {
+/*var keys =  {
 
  key: fsa.readFileSync("keys/key.pem"),
 
  cert: fsa.readFileSync("keys/cert.pem")
-}
+}*/
 
 app.get("/check", function (req, res) {
   res.send("working");
@@ -65,5 +65,5 @@ const port = process.env.PORT || 4001;
 //   console.log("Connected to port " + port);
 // });
 
-let httpsServer = https.createServer(keys, app)
-httpsServer.listen(port)
+//let httpsServer = https.createServer(keys, app)
+//httpsServer.listen(port)
